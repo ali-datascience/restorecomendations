@@ -10,15 +10,14 @@ Ini juga bertujuan untuk menemukan kesamaan antara lingkungan Bengaluru berdasar
 
 
 ## Business Understanding
-
 ### Problem Statement
-- Ingin mengetahui bagaimana informasi behavior dari customer
+- Bagaimana  behavior dari customer terhadap pemesanan pada sebuah resto
 - Bagaimana demografi dari sebuah lokasi. Jenis makanan apa yang lebih populer di suatu daerah
 - Membantu restoran baru dalam menentukan tema, menu untuk lokasi tertentu untuk mendapatkan rekomendasi usaha kuliner apa yang sebaiknya 
 dijalankan berdasar data yang ada
 ### Goals
-- Mendapatkan informasi behavior dari customer
-- Memperoleg insign demografi dari sebuah lokasi. Jenis makanan apa yang lebih populer di suatu daerah
+- Mendapatkan informasi behavior dari customer 
+- Memperoleh insight demografi dari sebuah lokasi. Jenis makanan apa yang lebih populer di suatu daerah
 - Membuat system  yang dapat merekomendasikan resto dari nama resto yang pernah dikunjungi sebelumnya dan dari tipe resto yang ingin dibuka.
 
 ### Solution Approach
@@ -48,7 +47,7 @@ Kita akan menggunakan teknik collaborative filtering untuk membuat rekomendasi i
 
 ## Data Understanding
 Dataset untuk proyek ini dapat diunduh pada [tautan](https://www.kaggle.com/datasets/himanshupoddar/zomato-bangalore-restaurants)
-Pada dataset kali ini, kita hanya akan menggunakan 1 buah dataframe yaitu zomato.csv, berikut keterangan dataset yang saya jelaskan dalam bahasa indonesia:
+Pada dataset kali ini, kita hanya akan menggunakan 1 buah dataframe yaitu zomato.csv, dataset ini terdiri dari 23569 baris dan 17 kolom. berikut keterangan dataset yang saya jelaskan dalam bahasa indonesia:
 
 Berikut adalah deskripsi tiap kolom yang ada dari dataset
 
@@ -72,6 +71,16 @@ Berikut adalah deskripsi tiap kolom yang ada dari dataset
 |tipe_makanan| Tipe makanan 
 
 
+Didalam dataset ini ditemukan beberapa anomaly data sebagai berikut :
+- Ada missing value pada kolom **rate**
+- Kolom **phone** ada missing value
+- Ada missing value pada **location**
+- **rest_type** ditemukan missing value
+- **dish_liked** ditemukan missing value
+- **cuisines ** ditemukan missing value
+- **approx_cost(for two people)**	 ditemukan missing value, 
+- Pada kolom rate tipe data masih object
+
 
 Berikut adalah visualisasi data yang berasal dari kedua dataframe tersebut:
 Perlu diketahui pada visualisasi data yang diberikan di bawah ini berasal dari sample data dan bukan berasal dari keseluruhan data yang diberikan, disebabkan oleh besarnya data yang ada.
@@ -87,16 +96,15 @@ Pada multivariate data analysis, saya menggunakan pairplot pada rating dataset.
 
 ## Data Preparation
 Pada proses data preparation, saya hanya melakukan beberapa hal sebelum masuk ke content dan collaborative based filtering:
-- Data Cleansing Null Value
-- Hapus data duplicated
-- Rubah tipe data yang sesuai
-- Removing '/5' from Rates
-- Rubah Value Data Yes,No menjadi True/False
-- Lower casing
-- Removal of Punctuations
-- Removal of Stopwords
-- Removal of URLs
-- Spelling correction
+- Data Cleansing Null Value :
+  Menghapus missing value dengan fungsi dropna pada kolom yang terdapat missing value
+- Menghapus kolom-kolom yang tidak digunakan karena secara pertimbangan bisnis kolom-kolom tersebut tidak berarti, kolom-kolom tersebut adalah 'url','dish_liked','phone'
+- Hapus data duplicated dengan fungsi drop_duplicates agar tidak ada duplikasi dalam data
+- Rubah tipe data yang sesuai seperti kolom rate, diubah menjadi float karena rating seharusnya diisi oleh angka
+- Removing '/5' from Rates, agar data lebih mudah diolah
+- Rubah Value Data Yes,No menjadi True/False pada kolom online_order dan book_table
+- Melakukan perubahan terhadap nama kolom agar lebih rapih, yaitu pada kolom approx_cost(for two people) menjadi cost, listed_in(type) menjadi type dan listed_in(city) menjadi city 
+- Dilakukan Text cleansing pada kolom reviews_list dengan metode :Lower casing, Removal of Punctuations,Removal of Stopwords dengan librari dari nltk.corpus, Removal of URLs, Spelling correction
 
 
 **Pembagian Data Train dan Data Valid**
