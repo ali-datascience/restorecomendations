@@ -102,6 +102,36 @@ Pada proses data preparation, saya hanya melakukan beberapa hal sebelum masuk ke
 **Pembagian Data Train dan Data Valid**
   Setelah semua data sudah terkumpul, kita perlu membagi data tersebut menjadi data latih dan data validasi, namun sebelum itu kita perlu menarik sample dari dataset yang sudah ada.
 
+## EDA
+- Onine VS Offline Order
+![image](https://user-images.githubusercontent.com/84785795/190883317-7b22b92e-2354-44a6-91c9-d5ae98ee892f.png)
+
+Sebanyak 70 persen customer lebih memilih order secara online dan sisanya offline
+
+- Book Table Vs No
+
+![image](https://user-images.githubusercontent.com/84785795/190883335-bb24059c-b73c-4547-bbc6-218748f69929.png)
+Dari grafik dapat dilihat behavior customer lebih banyak yang pesan tanpa booking table terlebih dahulu
+
+- Customer Order Behavior By Restoran Type
+![image](https://user-images.githubusercontent.com/84785795/190883343-f3ccd8af-f42f-4a5a-b6a3-861a4471cba3.png)
+
+Secara keseluruhan Dari grafik dapat dilihat customer lebih banyak melakukan pembelian secara online sebanyak 69.2% dibanding offline sekitar 30.8 %, dan tipe restoran paling banyak disukai yaitu Casual Dining kemudian disusul dengan Quick Bites, Cafe dan Delivery.
+
+- Customer Order Offline dilihat dari Tipe Restoran
+![image](https://user-images.githubusercontent.com/84785795/190883358-276c145e-c5ad-4d6b-a6d2-02e772ac3f6a.png)
+
+Customer yang melakukan pembelian offline paling banyak berada di daerah Whitefield, Indiranagar, JP Nagar, Marathalli dan Basavanaguni dengan tipe restoran paling banyak adalah Casual Dinning
+
+- Customer Order Online dilihat dari Tipe Restoran
+![image](https://user-images.githubusercontent.com/84785795/190883387-d8d3c604-31c7-467d-9862-c7a9b37559cf.png)
+
+Customer yang melakukan pembelian online paling banyak berada di daerah Whitefield, HSR, Indiranagar, BTM dan Marathalli Dengan tipe restoran di dominasi oleh Casual Dinning dan Quiq Bites
+
+- Food Type
+![image](https://user-images.githubusercontent.com/84785795/190883406-7d7faea1-181b-40be-ace4-dc5ea14d7649.png)
+
+Customer paling sering melakukan delivery order
 
 ## Modeling
 **Content Based Filtering**
@@ -157,7 +187,10 @@ Sedangkan kekurangan pada evaluasi metrik adalah terletak pada kesederhanannya p
 Pada Collaborative Based Filtering, kita memiliki evaluasi metrik RMSE atau root-mean-square error.RMSE adalah ukuran yang sering digunakan untuk perbedaan antara nilai (nilai sampel atau populasi) yang diprediksi oleh model atau penduga dan nilai yang diamati.Berbeda dengan MSE, RMSE adalah hasil dari akar MSE membuat RMSE memiliki nilai yang lebih kecil dibandingkan dengan MSE.
 
 Berikut adalah rumus RMSE:
-![RMSE](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/22.JPG)
+
+![image](https://user-images.githubusercontent.com/84785795/190883262-238e2c93-461c-4bfb-939e-e0fadb827a98.png)
+
+
 Dimana,
 At = Nilai data Aktual
 Ft = Nilai hasil peramalan
@@ -167,4 +200,8 @@ N= banyaknya data
 RMSE memiliki nilai yang lebih kecil daripada MSE, dengan adanya nilai kecil ini dapat menjadi kelebihan dan kekurangan tersendiri. Kelebihan dari nilai kecil adalah kita tidak perlu takut karena nilai error nya kecil dan kita dapat langsung masuk ke tahap selanjutnya, namun dengan nilai error yang kecil, kita dapat menjadi terlalu percaya diri dengan modelnya tanpa melihat posibilitas overfitting atau undefitting.
 
 RMSE terlebih dahulu kita definisikan pada bagian metrik dalam model, kemudian kita visualisasikan lewat grafik.
-![Grafik](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/24.JPG))
+
+![image](https://user-images.githubusercontent.com/84785795/190883289-81a03796-2735-4d85-8cca-cb78913d2739.png)
+
+
+proses training model cukup smooth dan model konvergen pada epochs sekitar 20. Dari proses ini, kita memperoleh nilai error akhir sebesar sekitar 0.12 dan error pada data validasi sebesar 0.13. Nilai tersebut cukup bagus untuk sistem rekomendasi
