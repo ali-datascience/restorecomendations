@@ -98,7 +98,8 @@ Pada proses data preparation, saya hanya melakukan beberapa hal sebelum masuk ke
 - Removal of URLs
 - Spelling correction
 
-- **Pembagian Data Train dan Data Valid**
+
+**Pembagian Data Train dan Data Valid**
   Setelah semua data sudah terkumpul, kita perlu membagi data tersebut menjadi data latih dan data validasi, namun sebelum itu kita perlu menarik sample dari dataset yang sudah ada.
 
 
@@ -128,28 +129,25 @@ Selanjutnya kita melakukan proses compile pada model dengan binary crossentropy 
 
 Setelah proses compile sudah selesai, kita akan melatih model dengan batch_size 5 dan 20 epochs.
 
-Untuk mendapatkan rekomendasi, kita perlu menambahkan beberapa kode tambahan, dimulai dengan mengambil user_id secara acak dari rating_dataset. Dari user_id ini kita perlu mengetahui buku - buku apa saja yang pernah dibaca dan yang belum pernah dibaca, sehingga kita hanya dapat merekomendasikan buku - buku yang belum dibaca.
+Untuk mendapatkan rekomendasi, kita perlu menambahkan beberapa kode tambahan, dimulai dengan mengambil resto_type_id secara acak dari rating_dataset. Dari resto_type_id ini kita perlu mengetahui resto apa saja yang pernah dikunjungi dan yang belum dikunjungi, sehingga kita hanya dapat merekomendasikan resto-resto yang belum dikunjungi.
 
-Setelah itu kita akan mendapatkan rekomendasi sesuai dengan user_id yang didapatkan.
+Setelah itu kita akan mendapatkan rekomendasi sesuai dengan resto_type_id yang didapatkan.
 
-Hasil rekomendasi buku untuk user_id = 278221 adalah:
-![recommendedBooks](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/26.JPG))
+Hasil rekomendasi buku untuk resto_type_id = 60 adalah:
+![image](https://user-images.githubusercontent.com/84785795/190883061-e8c07225-ed2d-4c90-89f1-a97925d1d153.png)
+
 
 ## Evaluation
 
 **Content Based Filtering**
 Pada Content Based Filtering, saya menggunakan akurasi sebagai metrik evaluasi.
 Akurasi pada Content Based Filtering adalah:
-Jumlah buku yang direkomendasikan sesuai dengan penulis buku / Jumlah buku yang direkomendasikan
+Jumlah resto yang direkomendasikan sesuai dengan location resto / Jumlah resto yang direkomendasikan
 
-Dalam mengaplikasi metrik akurasi pada kode adalah dengan membuat variabel books_that_have_been_read_row yang akan mengambil satu row dari buku yang pernah dibaca sebelumnya, dan juga membuat variabel books_that_have_been_read_author adalah penulis buku dari buku yang pernah dibaca sebelumnya.
+Di bawah ini adalah hasil dari akurasi dari model sistem rekomendasi, di manaJumlah resto yang direkomendasikan sesuai denganlocation resto / Jumlah resto yang direkomendasikan.
 
-Saya juga membuat variabel  book_recommendation_authors merupakan sebuah list yang terdiri dari penulis - penulis dari buku - buku yang direkomendasikan oleh sistem.
-Kemudian saya membuat looping yang merupakan proses manual di mana setiap penulis dari buku yang direkomendasikan akan dicek, apabila sama, maka variabel real_author akan bertambah 1.
+![image](https://user-images.githubusercontent.com/84785795/190883168-72c4a931-7df7-43f9-81b1-2d844ac78298.png)
 
-Kemudian di bawah ini adalah hasil dari akurasi dari model sistem rekomendasi, di mana jumlah buku yang direkomendasikan sesuai dengan penulis buku (Variabel real_author) / Jumlah buku yang direkomendasikan (5).
-
-![Accuracy](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/27.JPG)
 
 Kelebihan pada evaluasi metrik akurasi terletak pada kesederhanaannya untuk dipahami, karena metrik akurasi hanyalah jumlah yang benar dibandingkan dengan keseluruhan jawaban.
 
