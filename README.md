@@ -103,35 +103,36 @@ Pada proses data preparation, saya hanya melakukan beberapa hal sebelum masuk ke
   Setelah semua data sudah terkumpul, kita perlu membagi data tersebut menjadi data latih dan data validasi, namun sebelum itu kita perlu menarik sample dari dataset yang sudah ada.
 
 ## EDA
-- Onine VS Offline Order
-![image](https://user-images.githubusercontent.com/84785795/190883317-7b22b92e-2354-44a6-91c9-d5ae98ee892f.png)
 
-Sebanyak 70 persen customer lebih memilih order secara online dan sisanya offline
+- Onine VS Offline Order <br>
+![image](https://user-images.githubusercontent.com/84785795/190883317-7b22b92e-2354-44a6-91c9-d5ae98ee892f.png)<br>
 
-- Book Table Vs No
+Sebanyak 70 persen customer lebih memilih order secara online dan sisanya offline<br>
 
-![image](https://user-images.githubusercontent.com/84785795/190883335-bb24059c-b73c-4547-bbc6-218748f69929.png)
-Dari grafik dapat dilihat behavior customer lebih banyak yang pesan tanpa booking table terlebih dahulu
+- Book Table Vs No<br>
 
-- Customer Order Behavior By Restoran Type
-![image](https://user-images.githubusercontent.com/84785795/190883343-f3ccd8af-f42f-4a5a-b6a3-861a4471cba3.png)
+![image](https://user-images.githubusercontent.com/84785795/190883335-bb24059c-b73c-4547-bbc6-218748f69929.png)<br>
+Dari grafik dapat dilihat behavior customer lebih banyak yang pesan tanpa booking table terlebih dahulu<br>
 
-Secara keseluruhan Dari grafik dapat dilihat customer lebih banyak melakukan pembelian secara online sebanyak 69.2% dibanding offline sekitar 30.8 %, dan tipe restoran paling banyak disukai yaitu Casual Dining kemudian disusul dengan Quick Bites, Cafe dan Delivery.
+- Customer Order Behavior By Restoran Type<br>
+![image](https://user-images.githubusercontent.com/84785795/190883343-f3ccd8af-f42f-4a5a-b6a3-861a4471cba3.png)<br>
 
-- Customer Order Offline dilihat dari Tipe Restoran
-![image](https://user-images.githubusercontent.com/84785795/190883358-276c145e-c5ad-4d6b-a6d2-02e772ac3f6a.png)
+Secara keseluruhan Dari grafik dapat dilihat customer lebih banyak melakukan pembelian secara online sebanyak 69.2% dibanding offline sekitar 30.8 %, dan tipe restoran paling banyak disukai yaitu Casual Dining kemudian disusul dengan Quick Bites, Cafe dan Delivery.<br>
 
-Customer yang melakukan pembelian offline paling banyak berada di daerah Whitefield, Indiranagar, JP Nagar, Marathalli dan Basavanaguni dengan tipe restoran paling banyak adalah Casual Dinning
+- Customer Order Offline dilihat dari Tipe Restoran<br>
+![image](https://user-images.githubusercontent.com/84785795/190883358-276c145e-c5ad-4d6b-a6d2-02e772ac3f6a.png)<br>
 
-- Customer Order Online dilihat dari Tipe Restoran
-![image](https://user-images.githubusercontent.com/84785795/190883387-d8d3c604-31c7-467d-9862-c7a9b37559cf.png)
+Customer yang melakukan pembelian offline paling banyak berada di daerah Whitefield, Indiranagar, JP Nagar, Marathalli dan Basavanaguni dengan tipe restoran paling banyak adalah Casual Dinning<br>
 
-Customer yang melakukan pembelian online paling banyak berada di daerah Whitefield, HSR, Indiranagar, BTM dan Marathalli Dengan tipe restoran di dominasi oleh Casual Dinning dan Quiq Bites
+- Customer Order Online dilihat dari Tipe Restoran<br>
+![image](https://user-images.githubusercontent.com/84785795/190883387-d8d3c604-31c7-467d-9862-c7a9b37559cf.png)<br>
 
-- Food Type
-![image](https://user-images.githubusercontent.com/84785795/190883406-7d7faea1-181b-40be-ace4-dc5ea14d7649.png)
+Customer yang melakukan pembelian online paling banyak berada di daerah Whitefield, HSR, Indiranagar, BTM dan Marathalli Dengan tipe restoran di dominasi oleh Casual Dinning dan Quiq Bites<br>
 
-Customer paling sering melakukan delivery order
+- Food Type<br>
+![image](https://user-images.githubusercontent.com/84785795/190883406-7d7faea1-181b-40be-ace4-dc5ea14d7649.png)<br>
+
+Customer paling sering melakukan delivery order<br>
 
 ## Modeling
 **Content Based Filtering**
