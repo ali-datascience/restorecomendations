@@ -181,10 +181,8 @@ Setelah proses compile sudah selesai, kita akan melatih model dengan batch_size 
 
 Untuk mendapatkan rekomendasi, kita perlu menambahkan beberapa kode tambahan, dimulai dengan mengambil resto_type_id secara acak dari rating_dataset. Dari resto_type_id ini kita perlu mengetahui resto apa saja yang pernah dikunjungi dan yang belum dikunjungi, sehingga kita hanya dapat merekomendasikan resto-resto yang belum dikunjungi.
 
-Setelah itu kita akan mendapatkan rekomendasi sesuai dengan resto_type_id yang didapatkan.
+Setelah itu kita akan mendapatkan rekomendasi sesuai dengan resto_type_id yang didapatkan. Hasil rekomendasi buku untuk resto_type_id = 60 adalah:
 
-Hasil rekomendasi buku untuk resto_type_id = 60 adalah:
-<br>
 Showing recommendations for resto_type_id: 60
 ===========================
 Resto with high ratings from user
