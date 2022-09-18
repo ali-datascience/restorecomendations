@@ -76,36 +76,27 @@ Berikut adalah deskripsi tiap kolom yang ada dari dataset
 Berikut adalah visualisasi data yang berasal dari kedua dataframe tersebut:
 Perlu diketahui pada visualisasi data yang diberikan di bawah ini berasal dari sample data dan bukan berasal dari keseluruhan data yang diberikan, disebabkan oleh besarnya data yang ada.
 **Univariate Data Analysis**
-Pada univariate data analysis, kita akan melihat 2 barplot:
-- Barplot Pertama
-  ![Barplot Pertama](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/15.JPG))
-
-    Pada barplot pertama, saya menganalisa rating yang berasal dari rating dataset. Ternyata banyak pengguna yang memberi penilian 0 pada buku - buku yang mereka telah baca. Penilian 0 dari 10 tetaplah valid, sehingga kita tidak dapat menganggap nilai 0 ini sebagai nilai NaN.
-- Barplot Kedua
-  ![Barplot Kedua](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/17.JPG)) 
-    Pada barplot kedua, saya menganalisa tahun terbitnya buku, Ternyata banyak sekali buku yang terbit pada tahun 2002.
+Pada univariate data analysis, kita akan melihat barplot
+  ![image](https://user-images.githubusercontent.com/84785795/190882489-f9936612-f214-44ce-ab40-886e429f6b87.png)  
+  Pada barplot, saya menganalisa rating yang berasal dari rating dataset. Ternyata banyak juga pengguna yang memberi rating cukup baik.
+  
 **Multivariate Data Analysis**
 Pada multivariate data analysis, saya menggunakan pairplot pada rating dataset.
-![pairplot](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/18.JPG))
+![image](https://user-images.githubusercontent.com/84785795/190882530-8250b688-f636-45a6-9744-92254177eb93.png)
+
 
 ## Data Preparation
-Pada proses data preparation, saya hanya melakukan 2 hal sebelum masuk ke content dan collaborative based filtering:
-- **Dropna**
-  Dropna perlu digunakan dalam proses data preparation untuk membuang seluruh row yang memiliki NaN values. Sebuah model tidak dapat melakukan training apabila terdapat nilai NaN pada data latih. 
-- **Drop Duplicates**
-  Drop dulicates digunakan dalam proses data preparation untuk membuang data - data yang terduplikasi. Adanya data yang terduplikasi membuat model berlatih menggunakan data yang  berulang.
-
-**Content Based Filtering**
-Pada content Based Filtering, data preparation yang diperlukan ada 2, yaitu:
-- **Dataframe dari buku menjadi sebuah list**
-  Perubahan dari dataseries menjadi list dipenuhi dengan menggunakan .tolist() method. Proses ini diperlukan karena list ini akan digunakan pada tahap selanjutnya menjadi dictionary baru yg akan menjadi landasan pada sistem rekomendasi
-- **Memasukkan List ke Dictionary**
-  Setelah kita membuat list, kita perlu membuat dictionary yang digunakan untuk memnentukan pasangan key-value pada book_ISBN, book_title, book_author, dan book_year_of_publication. 
-
-**Collaborative Based Filtering**
-Data preparation yang diperlukan pada sistem collaborative based filtering dimulai dengan menyandikan user_id pada rating_dataset dan ISBN pada book_dataset menjadi integer.
-
-Setelah disandikan, jumlah dari user_id dan ISBN tersebut akan disimpan pada num_users dan num_book.
+Pada proses data preparation, saya hanya melakukan beberapa hal sebelum masuk ke content dan collaborative based filtering:
+- Data Cleansing Null Value
+- Hapus data duplicated
+- Rubah tipe data yang sesuai
+- Removing '/5' from Rates
+- Rubah Value Data Yes,No menjadi True/False
+- Lower casing
+- Removal of Punctuations
+- Removal of Stopwords
+- Removal of URLs
+- Spelling correction
 
 - **Pembagian Data Train dan Data Valid**
   Setelah semua data sudah terkumpul, kita perlu membagi data tersebut menjadi data latih dan data validasi, namun sebelum itu kita perlu menarik sample dari dataset yang sudah ada.
@@ -113,32 +104,23 @@ Setelah disandikan, jumlah dari user_id dan ISBN tersebut akan disimpan pada num
 
 ## Modeling
 **Content Based Filtering**
-Pada content Based Filtering, kita akan menggunakan TF-IDF Vectorizer untuk membangun sistem rekomendasi berdasarkan penulis buku.
+Pada content Based Filtering, kita akan menggunakan TF-IDF Vectorizer untuk membangun sistem rekomendasi berdasarkan nama resto.
 
 TF-IDF yang merupakan kepanjangan dari Term Frequency-Inverse Document Frequency memiliki fungsi untuk mengukur seberapa pentingnya suatu kata terhadap kata - kata lain dalam dokumen.
 Kita umumnya menghitung skor untuk setiap kata untuk menandakan pentingnya dalam dokumen dan corpus. Metode sering digunakan dalam Information Retrieval dan Text Mining.
 
-![TF-IDF initialization](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/19.JPG))
-Pada code di atas, saya mendefinisikan tf = TfidfVectorizer() dan mendapatkan kata - kata penting dalam kolom book_author yang berasal dari attribut .get_feature_names() dari tf.
+![image](https://user-images.githubusercontent.com/84785795/190882711-8d092146-46d4-4436-a35f-ab1220bc5ed5.png)
 
-Kemudian dari string yang didapat akan dimasukkan ke dalam matriks. Pada proyek ini, saya menggunakan tfidf_matrix sebagai matriks.
+Pada code di atas, saya mendefinisikantfidf = TfidfVectorizer(analyzer='word', ngram_range=(1, 2), min_df=0, stop_words='english') dan mendapatkan kata - kata penting dalam kolomreviews_list.
 
-Dalam sistem rekomendasi, kita perlu mencari cara supaya item yang kita rekomendasikan tidak terlalu jauh dari data pusat, oleh karena itu kita butuh derajat kesamaan pada item, dalam proyek ini, buku dengan derajat kesamaan antar buku dengan cosine similarity.
+Dalam sistem rekomendasi, kita perlu mencari cara supaya item yang kita rekomendasikan tidak terlalu jauh dari data pusat, oleh karena itu kita butuh derajat kesamaan pada item, dalam proyek ini, resto dengan derajat kesamaan antar resto dengan cosine similarity.
 
-Kemudian kita membutuhkan fungsi author_recommendation di mana atribut argpartition berguna untuk mengambil sejumlah nilai k, dalam fungsi ini 5 tertinggi dari tingkat kesamaan yang berasal dari dataframe cosine_sim_df. Jumlah rekomendasi yang akan diberikan nantinya akan ditentukan oleh nilai k pada fungsi author_recommendation.
+Kemudian kita membutuhkan fungsi recommend untuk menampilkan system rekomendasi kepada user.
 
-**book[book.book_title.eq(books_that_have_been_read)]**
+Berikut adalah contoh output system rekomendasi yang kita buat
 
-Kode di atas dibutuhkan untuk mencari buku yang memiliki kemiripan dengan buku yang sudah kita baca.
+![image](https://user-images.githubusercontent.com/84785795/190882786-6ce107da-eabb-4fd5-b950-a08a904b8e8c.png)
 
-**recommendations = author_recommendations(books_that_have_been_read, cosine_sim_df, book[['book_title', 'book_author']])**
-
-Setelah kita menjalankan kode di atas, kita akan mendapatkan 5 buku rekomendasi yang berasal dari penulis yang sama.
-Berikut adalah hasil rekomendasi untuk buku "The Diaries of Adam and Eve":
-
-![recommendedBooks](https://raw.githubusercontent.com/farelarden/Dicoding-SIB/main/23.JPG))
-
-Terlihat dari buku - buku yang direkomendasikan berasal dari penulis buku yang sama. Buku yang memiliki penulis yang sama memiliki kesamaan konten, gaya penulisan, dan bahasa membuat pembaca nyaman dan tidak perlu beradaptasi dengan perubahan gaya penulisan dan bahasa yang ada.
 
 **Collaborative Based Filtering**
 Model yang akan dipakai dalam Collaborative Based Filtering adalah RecommenderNet.
