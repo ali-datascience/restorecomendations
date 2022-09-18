@@ -200,24 +200,27 @@ Resto with high ratings from user
 --------------------------------
 Top 5 resto recommendation
 --------------------------------
-|       |            resto_name |    resto_type |                                  resto_dish_liked |                              resto_cuisines | resto_location |   resto_city |                                     resto_address | resto_rate | resto_type_id | resto_location_id | tipe_resto | lokasi_resto |
-|------:|----------------------:|--------------:|--------------------------------------------------:|--------------------------------------------:|---------------:|-------------:|--------------------------------------------------:|-----------:|--------------:|------------------:|-----------:|-------------:|
-|  3600 |        The Globe Grub | Casual Dining | Prawn, Shahi Tukda, Barfi, Veg Mushroom, Pizza... |   Continental, North Indian, Asian, Italian |            BTM |          BTM | C K Emerald, Opposite Yes Bank, BTM Layout, Ba... |        4.4 |            20 |                 0 |          0 |           11 |
-|  1725 |               Samaroh | Casual Dining | Kulfi, Rajasthani Thali, Sweet Paan, Buttermil... |                                North Indian |      Bellandur |    Bellandur |      The Bay, RMZ Eco World, Bellandur, Bangalore |        4.0 |            20 |                 6 |          0 |           17 |
-|  7286 | Balle-Licious Kitchen |      Delivery | Dal Makhani, Butter Chicken, Reshmi Kebab, Sha... |                                North Indian |            HSR |          HSR | 112/1, Lakedew Residency, Haralur Main Road, H... |        3.9 |            29 |                21 |          6 |           20 |
-|  2408 |           Little Chef | Casual Dining |                     Dragon Chicken, Hunan Chicken |                                     Chinese |  Richmond Road | Brigade Road | 20/2, Anjaneya Temple Street, YG Palya, Austin... |        4.0 |            20 |                64 |          0 |           15 |
-| 18644 |         Hungree Belly | Casual Dining | Chaat, Samosa, Gulab Jamun, Pudina Chicken, Bu... | Continental, North Indian, Chinese, Bengali |  Kaggadasapura | Marathahalli | 52/1, First Floor, Tejasvi Plaza, Mallesh Paly... |        4.0 |            20 |                32 |          0 |           67 |
+|      |            resto_name | resto_type |                                  resto_dish_liked |   resto_cuisines |             resto_location |        resto_city |                                     resto_address | resto_rate | resto_type_id | resto_location_id | tipe_resto | lokasi_resto |
+|-----:|----------------------:|-----------:|--------------------------------------------------:|-----------------:|---------------------------:|------------------:|--------------------------------------------------:|-----------:|--------------:|------------------:|-----------:|-------------:|
+| 3171 |               Cakesta |     Bakery | Eggless Cake, Choco Mocha, Choco Almond, Blueb... | Bakery, Desserts | ITPL Main Road, Whitefield |       Brookefield |  Ascendas Park Square, ITPL Main Road, Whitefield |        4.1 |             0 |                24 |         16 |           49 |
+|  626 |   Bread Crumbs Bakery |     Bakery |  Samosa, Egg Puff, Paneer Puff, Chocolate Truffle | Desserts, Bakery |          Bannerghatta Road | Bannerghatta Road | 989, Ambika Corner, DC Road, Off Bannerghatta ... |        4.0 |             0 |                 3 |         16 |            9 |
+| 7132 |             Cake Cafe |     Bakery |                                    Blueberry Cake | Bakery, Desserts |                        HSR |               HSR | Garden Layout Road, Sector 2, HSR Layout, HSR,... |        4.0 |             0 |                21 |         16 |           20 |
+| 7339 |    L J Iyengar Bakery |     Bakery |              Fruit Cake, Chocolate Cake, Egg Puff |           Bakery |                        HSR |               HSR | 530, 24th Main, Sector 2, HSR Layout, HSR, Ban... |        3.9 |             0 |                21 |         16 |           20 |
+| 3987 | Kwality Cakes N Bakes |     Bakery |            Eggless Cake, Burgers, Red Velvet Cake | Bakery, Desserts |                        HSR |               BTM | Shop 355/1 14th B Cross, Sector 6, HSR, Bangalore |        3.7 |             0 |                21 |         16 |           20 |
+
+
 <br>
 
 System rekomendasi diatas menampilkan rekomendasi type resto yang belum pernah dikunjungi oleh investor/bukan pilihan investor. dalam kasus ini investor ingin membuka usaha dan mendapatkan rekomendasi sesuai tipe restoran yang dia sukai, maka dapat menggunakan Showing recommendations for users.
 
 |      |            resto_name | resto_type |                                  resto_dish_liked |   resto_cuisines |             resto_location |        resto_city |                                     resto_address | resto_rate | resto_type_id | resto_location_id | tipe_resto | lokasi_resto |
 |-----:|----------------------:|-----------:|--------------------------------------------------:|-----------------:|---------------------------:|------------------:|--------------------------------------------------:|-----------:|--------------:|------------------:|-----------:|-------------:|
-|  626 |   Bread Crumbs Bakery |     Bakery |  Samosa, Egg Puff, Paneer Puff, Chocolate Truffle | Desserts, Bakery |          Bannerghatta Road | Bannerghatta Road | 989, Ambika Corner, DC Road, Off Bannerghatta ... |        4.0 |             0 |                 3 |         16 |            9 |
 | 3171 |               Cakesta |     Bakery | Eggless Cake, Choco Mocha, Choco Almond, Blueb... | Bakery, Desserts | ITPL Main Road, Whitefield |       Brookefield |  Ascendas Park Square, ITPL Main Road, Whitefield |        4.1 |             0 |                24 |         16 |           49 |
-| 7339 |    L J Iyengar Bakery |     Bakery |              Fruit Cake, Chocolate Cake, Egg Puff |           Bakery |                        HSR |               HSR | 530, 24th Main, Sector 2, HSR Layout, HSR, Ban... |        3.9 |             0 |                21 |         16 |           20 |
+|  626 |   Bread Crumbs Bakery |     Bakery |  Samosa, Egg Puff, Paneer Puff, Chocolate Truffle | Desserts, Bakery |          Bannerghatta Road | Bannerghatta Road | 989, Ambika Corner, DC Road, Off Bannerghatta ... |        4.0 |             0 |                 3 |         16 |            9 |
 | 7132 |             Cake Cafe |     Bakery |                                    Blueberry Cake | Bakery, Desserts |                        HSR |               HSR | Garden Layout Road, Sector 2, HSR Layout, HSR,... |        4.0 |             0 |                21 |         16 |           20 |
+| 7339 |    L J Iyengar Bakery |     Bakery |              Fruit Cake, Chocolate Cake, Egg Puff |           Bakery |                        HSR |               HSR | 530, 24th Main, Sector 2, HSR Layout, HSR, Ban... |        3.9 |             0 |                21 |         16 |           20 |
 | 3987 | Kwality Cakes N Bakes |     Bakery |            Eggless Cake, Burgers, Red Velvet Cake | Bakery, Desserts |                        HSR |               BTM | Shop 355/1 14th B Cross, Sector 6, HSR, Bangalore |        3.7 |             0 |                21 |         16 |           20 |
+
 <br>
 
 
