@@ -225,6 +225,11 @@ Di bawah ini adalah hasil dari akurasi dari model sistem rekomendasi, di manaJum
 
 ![image](https://user-images.githubusercontent.com/84785795/190883168-72c4a931-7df7-43f9-81b1-2d844ac78298.png)
 
+Sedangkan Precision pada recomendasion system mempunya rumus :
+
+![image](https://user-images.githubusercontent.com/84785795/190900043-49b60283-8701-435e-8392-662877077260.png)
+
+Dari hasil tersebut di preleh presisi sebesar 20%
 
 Kelebihan pada evaluasi metrik akurasi terletak pada kesederhanaannya untuk dipahami, karena metrik akurasi hanyalah jumlah yang benar dibandingkan dengan keseluruhan jawaban.
 
