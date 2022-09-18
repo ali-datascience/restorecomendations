@@ -195,11 +195,13 @@ Drunken Monkey : Beverages, Fast Food . Rating: 4.4 .Resto Type: Beverage Shop &
 --------------------------------
 Top 5 resto recommendation
 --------------------------------
-The Globe Grub : Continental, North Indian, Asian, Italian Resto Type: Casual Dining , Location:  BTM . Dish Like: Prawn, Shahi Tukda, Barfi, Veg Mushroom, Pizza, Momos, Masala Lemonade
-Samaroh : North Indian Resto Type: Casual Dining , Location:  Bellandur . Dish Like: Kulfi, Rajasthani Thali, Sweet Paan, Buttermilk, Rasmalai, Chaat, Lassi
-Balle-Licious Kitchen : North Indian Resto Type: Delivery , Location:  HSR . Dish Like: Dal Makhani, Butter Chicken, Reshmi Kebab, Shahi Paneer, Butter Naan, Shahi Tukda, Chilli Chicken
-Little Chef : Chinese Resto Type: Casual Dining , Location:  Richmond Road . Dish Like: Dragon Chicken, Hunan Chicken
-Quench Bar : Seafood, Mexican, Continental, Finger Food Resto Type: Bar , Location:  Domlur . Dish Like: Rooftop Ambience, Decor
+| resto_name |            resto_type | resto_dish_liked |                                    resto_cuisines |                             resto_location |    resto_city | resto_address |                                        resto_rate | resto_type_id | resto_location_id | tipe_resto | lokasi_resto |    |
+|-----------:|----------------------:|-----------------:|--------------------------------------------------:|-------------------------------------------:|--------------:|--------------:|--------------------------------------------------:|--------------:|------------------:|-----------:|-------------:|----|
+|    3600    |        The Globe Grub |    Casual Dining | Prawn, Shahi Tukda, Barfi, Veg Mushroom, Pizza... |  Continental, North Indian, Asian, Italian |           BTM |           BTM | C K Emerald, Opposite Yes Bank, BTM Layout, Ba... |           4.4 |                20 |          0 |            0 | 11 |
+|    1725    |               Samaroh |    Casual Dining | Kulfi, Rajasthani Thali, Sweet Paan, Buttermil... |                               North Indian |     Bellandur |     Bellandur |      The Bay, RMZ Eco World, Bellandur, Bangalore |           4.0 |                20 |          6 |            0 | 17 |
+|    7286    | Balle-Licious Kitchen |         Delivery | Dal Makhani, Butter Chicken, Reshmi Kebab, Sha... |                               North Indian |           HSR |           HSR | 112/1, Lakedew Residency, Haralur Main Road, H... |           3.9 |                29 |         21 |            6 | 20 |
+|    2408    |           Little Chef |    Casual Dining |                     Dragon Chicken, Hunan Chicken |                                    Chinese | Richmond Road |  Brigade Road | 20/2, Anjaneya Temple Street, YG Palya, Austin... |           4.0 |                20 |         64 |            0 | 15 |
+|    8449    |            Quench Bar |              Bar |                           Rooftop Ambience, Decor | Seafood, Mexican, Continental, Finger Food |        Domlur |   Indiranagar | 8th Floor, 282/285, Ramada Encore, 1st Stage, ... |           4.0 |                 4 |         15 |           10 | 36 |
 <br>
 
 System rekomendasi diatas menampilkan rekomendasi type resto yang belum pernah dikunjungi oleh investor/bukan pilihan investor. dalam kasus ini investor ingin membuka usaha dan mendapatkan rekomendasi sesuai tipe restoran yang dia sukai, maka dapat menggunakan Showing recommendations for users.
