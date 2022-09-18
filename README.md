@@ -159,18 +159,18 @@ Kemudian kita membutuhkan fungsi recommend untuk menampilkan system rekomendasi 
 
 Berikut adalah contoh output system rekomendasi yang kita buat
 
-|                                        |                                          cuisines | Mean Rating | cost |              location |                  city |
-|---------------------------------------:|--------------------------------------------------:|------------:|-----:|----------------------:|----------------------:|
-|       Byg Brewski Brewing Company      | Continental, North Indian, Italian, South Indi... |        5.00 |  1.6 |         Sarjapur Road |             Bellandur |
-|                Flechazo                |           Asian, Mediterranean, North Indian, BBQ |        4.87 |  1.4 |            Whitefield |            Whitefield |
-|        Ab'S - Absolute Barbecues       |        European, Mediterranean, North Indian, BBQ |        4.86 |  1.6 |                   BTM |                   BTM |
-|               Biergarten               |        Continental, European, BBQ, Chinese, Asian |        4.83 |  2.4 |            Whitefield |            Whitefield |
-|               Biergarten               | Continental, North Indian, Chinese, European, ... |        4.83 |  2.1 | Koramangala 5th Block | Koramangala 6th Block |
-|                Communiti               |                           Continental, BBQ, Salad |        4.67 |  1.5 |        Residency Road |          Brigade Road |
-|                Hammered                |   North Indian, Thai, Japanese, Continental, Cafe |        4.65 |  1.3 |       Cunningham Road |          Lavelle Road |
-| Brew And Barbeque - A Microbrewery Pub |             Continental, North Indian, BBQ, Steak |        4.64 |  1.4 |          Marathahalli |          Marathahalli |
-|             The Globe Grub             |         Continental, North Indian, Asian, Italian |        4.48 |  1.3 |          Marathahalli |          Marathahalli |
-|               Jalsa Gold               |                    North Indian, Mughlai, Italian |        4.48 |  1.3 |          Marathahalli |          Marathahalli |
+|                                | cuisines                                          | Mean Rating | cost | location              | city                  |
+|-------------------------------:|---------------------------------------------------|-------------|------|-----------------------|-----------------------|
+| Asia Kitchen By Mainland China |                       Asian, Chinese, Thai, Momos |        5.00 |  1.5 | Koramangala 5th Block | Koramangala 5th Block |
+|           Biergarten           | Continental, North Indian, Chinese, European, ... |        4.83 |  2.1 | Koramangala 5th Block | Koramangala 7th Block |
+|         The Black Pearl        |        North Indian, European, Mediterranean, BBQ |        4.78 |  1.5 |          Marathahalli |             Bellandur |
+|            Hammered            |    North Indian, South Indian, Continental, Asian |        4.65 |  1.2 |                   HSR | Koramangala 4th Block |
+|    Vapour Brewpub And Diner    |                North Indian, Continental, Italian |        4.54 |  1.4 |         Sarjapur Road |         Sarjapur Road |
+|              Roots             | North Indian, South Indian, Chinese, Continent... |        4.53 |  1.2 | Koramangala 1st Block | Koramangala 5th Block |
+|           Jalsa Gold           |                    North Indian, Mughlai, Italian |        4.48 |  1.3 |          Marathahalli |             Bellandur |
+|           The Pallet           | Continental, Mediterranean, Italian, North Ind... |        4.48 |  1.6 |            Whitefield |            Whitefield |
+|    Brooks And Bonds Brewery    | Continental, Mediterranean, North Indian, Chin... |        4.45 |  1.6 | Koramangala 5th Block | Koramangala 4th Block |
+|          Delhi Highway         |                             North Indian, Mughlai |        4.41 |  1.5 |           Indiranagar |      Old Airport Road |
 
 
 **Collaborative Based Filtering**
@@ -187,21 +187,26 @@ Showing recommendations for resto_type_id: 60
 ===========================
 Resto with high ratings from user
 --------------------------------
-House Of Commons : Continental, Asian, North Indian . Rating: 4.8 .Resto Type: Bar , Location:  Koramangala 5th Block . Dish Like: Cocktails, Chaap, Tandoori Chicken, Mocktails, Beer, Ghee Roast Mutton, Martini
-One For The Road : Continental, North Indian, Finger Food . Rating: 4.5 .Resto Type: Bar , Location:  Nagawara . Dish Like: Cocktails, Pasta, Pizza, Mocktails, Thai Crispy Chicken, Beer, Chicken Wings
-The Old Fashioned Bar : Finger Food, North Indian, Continental . Rating: 4.5 .Resto Type: Bar , Location:  Koramangala 6th Block . Dish Like: Cocktails, Long Island Iced Tea, Draught Beer, Masala Peanuts, Pizza, Mocktails, Chicken Tikka
-Myu Bar at Gilly's Redefined : American, North Indian, Pizza, Finger Food, Continental, Italian . Rating: 4.4 .Resto Type: Microbrewery &  Bar , Location:  Koramangala 4th Block . Dish Like: Mai Thai, Sangria, Cocktails, Pizza, Biryani, Beer, Chicken Nachos
-Drunken Monkey : Beverages, Fast Food . Rating: 4.4 .Resto Type: Beverage Shop &  Quick Bites , Location:  Bannerghatta Road . Dish Like: Chicken Tikka Sandwich, Hot Chocolate Brownie, Red Velvet Shake, Chicken Sandwiches, French Fries, Cheese Sandwich, Irish Cream Coffee
+
+|      |                     resto_name |           resto_type |                                  resto_dish_liked |                                    resto_cuisines |        resto_location |   resto_city |                                     resto_address | resto_rate | resto_type_id | resto_location_id | tipe_resto | lokasi_resto |
+|-----:|-------------------------------:|---------------------:|--------------------------------------------------:|--------------------------------------------------:|----------------------:|-------------:|--------------------------------------------------:|-----------:|--------------:|------------------:|-----------:|-------------:|
+| 3613 | Asia Kitchen By Mainland China |  Casual Dining & Bar | Noodles, Chicken Dim Sum, Pad Thai Noodle, Jum... |                       Asian, Chinese, Thai, Momos | Koramangala 5th Block |          BTM | 136, Ground Floor, 1st Cross, 5th Block, Jyoti... |        4.9 |            21 |                41 |         15 |           13 |
+| 1534 |                The Black Pearl |  Casual Dining & Bar | Dahipuri, Jal-jeera, Chicken Grill, Mutton See... |        North Indian, European, Mediterranean, BBQ |          Marathahalli |    Bellandur | 20/7, Swamy Legato, Outer Ring Road, Kadubeesa... |        4.8 |            21 |                52 |         15 |           19 |
+| 7369 |                 TBC Sky Lounge |  Casual Dining & Bar | Kulcha, Cocktails, Peri Peri Chicken, Masala P... |         Continental, Asian, Italian, North Indian |                   HSR |          HSR | Astra Hotel, 2795, 27th Main, Sector 1, HSR, B... |        4.7 |            21 |                21 |         15 |           20 |
+|   6  |                         Onesta | Casual Dining & Cafe | Farmhouse Pizza, Chocolate Banana, Virgin Moji... |                              Pizza, Cafe, Italian |          Banashankari | Banashankari | 2469, 3rd Floor, 24th Cross, Opposite BDA Comp... |        4.6 |            22 |                 1 |          3 |            0 |
+| 2356 |                           MISU |  Casual Dining & Bar | Sushi, Dumplings, Khau Suey, Noodles, Cocktail... | Asian, Japanese, Korean, Indonesian, Malaysian... |        St. Marks Road | Brigade Road | 4th Floor, Building 9, Halcyon Complex, St. Ma... |        4.6 |            21 |                74 |         15 |           33 |
+
+
 --------------------------------
 Top 5 resto recommendation
 --------------------------------
-| resto_name |            resto_type | resto_dish_liked |                                    resto_cuisines |                             resto_location |    resto_city | resto_address |                                        resto_rate | resto_type_id | resto_location_id | tipe_resto | lokasi_resto |    |
-|-----------:|----------------------:|-----------------:|--------------------------------------------------:|-------------------------------------------:|--------------:|--------------:|--------------------------------------------------:|--------------:|------------------:|-----------:|-------------:|----|
-|    3600    |        The Globe Grub |    Casual Dining | Prawn, Shahi Tukda, Barfi, Veg Mushroom, Pizza... |  Continental, North Indian, Asian, Italian |           BTM |           BTM | C K Emerald, Opposite Yes Bank, BTM Layout, Ba... |           4.4 |                20 |          0 |            0 | 11 |
-|    1725    |               Samaroh |    Casual Dining | Kulfi, Rajasthani Thali, Sweet Paan, Buttermil... |                               North Indian |     Bellandur |     Bellandur |      The Bay, RMZ Eco World, Bellandur, Bangalore |           4.0 |                20 |          6 |            0 | 17 |
-|    7286    | Balle-Licious Kitchen |         Delivery | Dal Makhani, Butter Chicken, Reshmi Kebab, Sha... |                               North Indian |           HSR |           HSR | 112/1, Lakedew Residency, Haralur Main Road, H... |           3.9 |                29 |         21 |            6 | 20 |
-|    2408    |           Little Chef |    Casual Dining |                     Dragon Chicken, Hunan Chicken |                                    Chinese | Richmond Road |  Brigade Road | 20/2, Anjaneya Temple Street, YG Palya, Austin... |           4.0 |                20 |         64 |            0 | 15 |
-|    8449    |            Quench Bar |              Bar |                           Rooftop Ambience, Decor | Seafood, Mexican, Continental, Finger Food |        Domlur |   Indiranagar | 8th Floor, 282/285, Ramada Encore, 1st Stage, ... |           4.0 |                 4 |         15 |           10 | 36 |
+|       |            resto_name |    resto_type |                                  resto_dish_liked |                              resto_cuisines | resto_location |   resto_city |                                     resto_address | resto_rate | resto_type_id | resto_location_id | tipe_resto | lokasi_resto |
+|------:|----------------------:|--------------:|--------------------------------------------------:|--------------------------------------------:|---------------:|-------------:|--------------------------------------------------:|-----------:|--------------:|------------------:|-----------:|-------------:|
+|  3600 |        The Globe Grub | Casual Dining | Prawn, Shahi Tukda, Barfi, Veg Mushroom, Pizza... |   Continental, North Indian, Asian, Italian |            BTM |          BTM | C K Emerald, Opposite Yes Bank, BTM Layout, Ba... |        4.4 |            20 |                 0 |          0 |           11 |
+|  1725 |               Samaroh | Casual Dining | Kulfi, Rajasthani Thali, Sweet Paan, Buttermil... |                                North Indian |      Bellandur |    Bellandur |      The Bay, RMZ Eco World, Bellandur, Bangalore |        4.0 |            20 |                 6 |          0 |           17 |
+|  7286 | Balle-Licious Kitchen |      Delivery | Dal Makhani, Butter Chicken, Reshmi Kebab, Sha... |                                North Indian |            HSR |          HSR | 112/1, Lakedew Residency, Haralur Main Road, H... |        3.9 |            29 |                21 |          6 |           20 |
+|  2408 |           Little Chef | Casual Dining |                     Dragon Chicken, Hunan Chicken |                                     Chinese |  Richmond Road | Brigade Road | 20/2, Anjaneya Temple Street, YG Palya, Austin... |        4.0 |            20 |                64 |          0 |           15 |
+| 18644 |         Hungree Belly | Casual Dining | Chaat, Samosa, Gulab Jamun, Pudina Chicken, Bu... | Continental, North Indian, Chinese, Bengali |  Kaggadasapura | Marathahalli | 52/1, First Floor, Tejasvi Plaza, Mallesh Paly... |        4.0 |            20 |                32 |          0 |           67 |
 <br>
 
 System rekomendasi diatas menampilkan rekomendasi type resto yang belum pernah dikunjungi oleh investor/bukan pilihan investor. dalam kasus ini investor ingin membuka usaha dan mendapatkan rekomendasi sesuai tipe restoran yang dia sukai, maka dapat menggunakan Showing recommendations for users.
