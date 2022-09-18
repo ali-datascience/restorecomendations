@@ -159,8 +159,18 @@ Kemudian kita membutuhkan fungsi recommend untuk menampilkan system rekomendasi 
 
 Berikut adalah contoh output system rekomendasi yang kita buat
 
-![image](https://user-images.githubusercontent.com/84785795/190883524-3de36613-df0c-4979-b979-f8003bfd3d6d.png)
-
+|                                        |                                          cuisines | Mean Rating | cost |              location |                  city |
+|---------------------------------------:|--------------------------------------------------:|------------:|-----:|----------------------:|----------------------:|
+|       Byg Brewski Brewing Company      | Continental, North Indian, Italian, South Indi... |        5.00 |  1.6 |         Sarjapur Road |             Bellandur |
+|                Flechazo                |           Asian, Mediterranean, North Indian, BBQ |        4.87 |  1.4 |            Whitefield |            Whitefield |
+|        Ab'S - Absolute Barbecues       |        European, Mediterranean, North Indian, BBQ |        4.86 |  1.6 |                   BTM |                   BTM |
+|               Biergarten               |        Continental, European, BBQ, Chinese, Asian |        4.83 |  2.4 |            Whitefield |            Whitefield |
+|               Biergarten               | Continental, North Indian, Chinese, European, ... |        4.83 |  2.1 | Koramangala 5th Block | Koramangala 6th Block |
+|                Communiti               |                           Continental, BBQ, Salad |        4.67 |  1.5 |        Residency Road |          Brigade Road |
+|                Hammered                |   North Indian, Thai, Japanese, Continental, Cafe |        4.65 |  1.3 |       Cunningham Road |          Lavelle Road |
+| Brew And Barbeque - A Microbrewery Pub |             Continental, North Indian, BBQ, Steak |        4.64 |  1.4 |          Marathahalli |          Marathahalli |
+|             The Globe Grub             |         Continental, North Indian, Asian, Italian |        4.48 |  1.3 |          Marathahalli |          Marathahalli |
+|               Jalsa Gold               |                    North Indian, Mughlai, Italian |        4.48 |  1.3 |          Marathahalli |          Marathahalli |
 
 
 **Collaborative Based Filtering**
