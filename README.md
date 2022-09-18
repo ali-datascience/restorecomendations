@@ -184,11 +184,35 @@ Untuk mendapatkan rekomendasi, kita perlu menambahkan beberapa kode tambahan, di
 Setelah itu kita akan mendapatkan rekomendasi sesuai dengan resto_type_id yang didapatkan.
 
 Hasil rekomendasi buku untuk resto_type_id = 60 adalah:
-![image](https://user-images.githubusercontent.com/84785795/190883550-0d840400-c9fc-4344-808b-571f6f27d99e.png)<br>
+<br>
+Showing recommendations for resto_type_id: 60
+===========================
+Resto with high ratings from user
+--------------------------------
+House Of Commons : Continental, Asian, North Indian . Rating: 4.8 .Resto Type: Bar , Location:  Koramangala 5th Block . Dish Like: Cocktails, Chaap, Tandoori Chicken, Mocktails, Beer, Ghee Roast Mutton, Martini
+One For The Road : Continental, North Indian, Finger Food . Rating: 4.5 .Resto Type: Bar , Location:  Nagawara . Dish Like: Cocktails, Pasta, Pizza, Mocktails, Thai Crispy Chicken, Beer, Chicken Wings
+The Old Fashioned Bar : Finger Food, North Indian, Continental . Rating: 4.5 .Resto Type: Bar , Location:  Koramangala 6th Block . Dish Like: Cocktails, Long Island Iced Tea, Draught Beer, Masala Peanuts, Pizza, Mocktails, Chicken Tikka
+Myu Bar at Gilly's Redefined : American, North Indian, Pizza, Finger Food, Continental, Italian . Rating: 4.4 .Resto Type: Microbrewery &  Bar , Location:  Koramangala 4th Block . Dish Like: Mai Thai, Sangria, Cocktails, Pizza, Biryani, Beer, Chicken Nachos
+Drunken Monkey : Beverages, Fast Food . Rating: 4.4 .Resto Type: Beverage Shop &  Quick Bites , Location:  Bannerghatta Road . Dish Like: Chicken Tikka Sandwich, Hot Chocolate Brownie, Red Velvet Shake, Chicken Sandwiches, French Fries, Cheese Sandwich, Irish Cream Coffee
+--------------------------------
+Top 5 resto recommendation
+--------------------------------
+The Globe Grub : Continental, North Indian, Asian, Italian Resto Type: Casual Dining , Location:  BTM . Dish Like: Prawn, Shahi Tukda, Barfi, Veg Mushroom, Pizza, Momos, Masala Lemonade
+Samaroh : North Indian Resto Type: Casual Dining , Location:  Bellandur . Dish Like: Kulfi, Rajasthani Thali, Sweet Paan, Buttermilk, Rasmalai, Chaat, Lassi
+Balle-Licious Kitchen : North Indian Resto Type: Delivery , Location:  HSR . Dish Like: Dal Makhani, Butter Chicken, Reshmi Kebab, Shahi Paneer, Butter Naan, Shahi Tukda, Chilli Chicken
+Little Chef : Chinese Resto Type: Casual Dining , Location:  Richmond Road . Dish Like: Dragon Chicken, Hunan Chicken
+Quench Bar : Seafood, Mexican, Continental, Finger Food Resto Type: Bar , Location:  Domlur . Dish Like: Rooftop Ambience, Decor
+<br>
 
 System rekomendasi diatas menampilkan rekomendasi type resto yang belum pernah dikunjungi oleh investor/bukan pilihan investor. dalam kasus ini investor ingin membuka usaha dan mendapatkan rekomendasi sesuai tipe restoran yang dia sukai, maka dapat menggunakan Showing recommendations for users.
 
-![image](https://user-images.githubusercontent.com/84785795/190883572-15feab7e-d436-4a19-b5c1-b878c38f8cdb.png)
+|       |                   resto_name |                  resto_type |                                  resto_dish_liked |                                    resto_cuisines |        resto_location |            resto_city |                                     resto_address | resto_rate |
+|------:|-----------------------------:|----------------------------:|--------------------------------------------------:|--------------------------------------------------:|----------------------:|----------------------:|--------------------------------------------------:|-----------:|
+|  4388 |             House Of Commons |                         Bar | Cocktails, Chaap, Tandoori Chicken, Mocktails,... |                  Continental, Asian, North Indian | Koramangala 5th Block |                   BTM | 122/B, Jyothi Nivas Road, 5th Block, Koramanga... |        4.8 |
+| 10658 |             One For The Road |                         Bar | Cocktails, Pasta, Pizza, Mocktails, Thai Crisp... |            Continental, North Indian, Finger Food |              Nagawara |          Kalyan Nagar | 3rd Floor, Elements Mall, Thanisandra Main Roa... |        4.5 |
+| 12553 |        The Old Fashioned Bar |                         Bar | Cocktails, Long Island Iced Tea, Draught Beer,... |            Finger Food, North Indian, Continental | Koramangala 6th Block | Koramangala 4th Block | 470, 80 Feet Road, Koramangala 6th Block, Bang... |        4.5 |
+|  4691 | Myu Bar at Gilly's Redefined |          Microbrewery & Bar | Mai Thai, Sangria, Cocktails, Pizza, Biryani, ... | American, North Indian, Pizza, Finger Food, Co... | Koramangala 4th Block |                   BTM | 413, 100 Feet Road, Koramangala 4th Block, Ban... |        4.4 |
+|  588  |               Drunken Monkey | Beverage Shop & Quick Bites | Chicken Tikka Sandwich, Hot Chocolate Brownie,... |                              Beverages, Fast Food |     Bannerghatta Road |     Bannerghatta Road | 54/55, 3rd Cross, Omkar Nagar, Arekere Gate, B... |        4.4 |
 <br>
 
 
