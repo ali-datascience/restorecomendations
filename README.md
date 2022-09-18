@@ -151,7 +151,8 @@ Kemudian kita membutuhkan fungsi recommend untuk menampilkan system rekomendasi 
 
 Berikut adalah contoh output system rekomendasi yang kita buat
 
-![image](https://user-images.githubusercontent.com/84785795/190882786-6ce107da-eabb-4fd5-b950-a08a904b8e8c.png)
+![image](https://user-images.githubusercontent.com/84785795/190883524-3de36613-df0c-4979-b979-f8003bfd3d6d.png)
+
 
 
 **Collaborative Based Filtering**
@@ -165,7 +166,12 @@ Untuk mendapatkan rekomendasi, kita perlu menambahkan beberapa kode tambahan, di
 Setelah itu kita akan mendapatkan rekomendasi sesuai dengan resto_type_id yang didapatkan.
 
 Hasil rekomendasi buku untuk resto_type_id = 60 adalah:
-![image](https://user-images.githubusercontent.com/84785795/190883061-e8c07225-ed2d-4c90-89f1-a97925d1d153.png)
+![image](https://user-images.githubusercontent.com/84785795/190883550-0d840400-c9fc-4344-808b-571f6f27d99e.png)<br>
+
+System rekomendasi diatas menampilkan rekomendasi type resto yang belum pernah dikunjungi oleh investor/bukan pilihan investor. dalam kasus ini investor ingin membuka usaha dan mendapatkan rekomendasi sesuai tipe restoran yang dia sukai, maka dapat menggunakan Showing recommendations for users.
+
+![image](https://user-images.githubusercontent.com/84785795/190883572-15feab7e-d436-4a19-b5c1-b878c38f8cdb.png)
+<br>
 
 
 ## Evaluation
